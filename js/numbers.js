@@ -61,3 +61,48 @@ if(num < 1){
 function showresult(message) {
     document.getElementById("result").innerHTML="<h4>" +message+ "</h4>";
 }
+function reverse(){
+    num = input();
+    var rev = 0;
+   var r = 0;
+    while(num != 0){
+        
+        rev = (rev * 10) + (num % 10);
+        num = Math.floor(num /10);
+    }
+    showresult("reverse of a given number: " +rev);
+}
+function palindrome(){
+    num = input();
+    num2 = num;
+    var rev = 0;
+     var r = 0;
+    while(num != 0){
+       r = num % 10;
+        rev = (rev * 10) + r;
+        num = Math.floor(num /10); 
+    }
+    if(num2 == rev){
+        showresult("Given number " +num2+ " is palindrome");
+    }else{
+        showresult("Given number " +num2+ " is not a palindrome");
+    }
+}
+function sumdigit(){
+    num = input();
+    var sum = 0;
+    while(num !=0){
+        sum =sum + (num % 10);
+        num = Math.floor(num /10); 
+    }
+    showresult("sum of digits of given number: " +sum);
+}
+function sumsingle(){
+   var num = input();
+    var sum1 = num;
+    while(num > 9){
+        sum1 = (Math.floor(num /10))+ (num % 10);
+        num = sum1;
+    }
+   showresult("sum of digits until single digit: " +sum1);
+}
