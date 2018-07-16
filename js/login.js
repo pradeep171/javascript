@@ -11,7 +11,7 @@ function validate(){
     }
     if(pwd.trim() === ""){
         document.getElementById("errorpwd").innerHTML="Password can't be empty";
-        nameEle.style.border="1px solid red";
+        pwdEle.style.border="1px solid red";
         return false;
     }
 }
